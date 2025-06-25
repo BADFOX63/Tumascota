@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Error - TuMascota</title>
+  <link rel="stylesheet" href="Estilos.css">
+  <style>
+    body {
+      background-color: #f8d7da;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div class="error-box">
+  <h2>❗ Error</h2>
+  <p>Ocurrió un problema al procesar tu solicitud.<br>
+     Por favor verifica los datos ingresados e intenta nuevamente.</p>
+  <button onclick="volver()">Volver</button>
+</div>
+
+<script>
+  function volver() {
+    window.history.back(); // Regresa a la pantalla anterior
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - TuMascota</title>
+  <link rel="stylesheet" href="Estilos.css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-box">
+  <h2>Registro de Usuario</h2>
+  <input type="text" id="nombres" placeholder="Nombres">
+  <input type="text" id="apellidos" placeholder="Apellidos">
+  <input type="number" id="cedula" placeholder="Cédula">
+  <input type="date" id="fechaNacimiento" placeholder="Fecha de nacimiento">
+  <button onclick="registrar()">Guardar</button>
+  <div class="success" id="mensaje"></div>
+</div>
+
+<script>
+  function registrar() {
+    const nombres = document.getElementById("nombres").value;
+    const apellidos = document.getElementById("apellidos").value;
+    const cedula = document.getElementById("cedula").value;
+    const fecha = document.getElementById("fechaNacimiento").value;
+
+    if (nombres && apellidos && cedula && fecha) {
+      document.getElementById("mensaje").textContent = "Datos registrados correctamente.";
+    } else {
+      document.getElementById("mensaje").textContent = "Por favor completa todos los campos.";
+      document.getElementById("mensaje").style.color = "#FF4C4C";
+    }
+  }
+</script>
+
+</body>
+</html>
